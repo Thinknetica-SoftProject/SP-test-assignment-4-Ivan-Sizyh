@@ -9,5 +9,9 @@
 # - Результат должен быть выведен в консоль командой puts
 #
 ## Решение:
-
+sum = 0
+File.readlines("data/3.txt").each do |line|
+  sum += line.split.max.to_i - line.split.min.to_i
+end
+puts sum
 

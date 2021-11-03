@@ -15,5 +15,10 @@
 #
 #
 ## Решение:
+sum = 0
+File.readlines("data/4.txt").each do |line|
+  array = line.split("x").map{|item| item.to_i}.sort
+  sum += 2*array[2]*array[0] + 2*array[0]*array[1] + 2*array[1]*array[2] + array[0]*array[0]
+end
 
-
+puts sum

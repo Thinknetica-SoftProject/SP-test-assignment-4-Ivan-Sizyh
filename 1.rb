@@ -16,6 +16,12 @@
 #
 ## Решение:
 
+file = File.open("data/1.txt").read
+floor = 0
+file.each_char do |item|
+  item == "(" ? floor += 1 : floor -= 1
+end
+puts floor
 
 
 

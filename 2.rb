@@ -16,3 +16,20 @@
 #
 ## Решение:
 
+require 'digest/md5'
+
+md5 = Digest::MD5.new
+
+user_string = gets.chomp
+hash_count = 0
+while(true) do
+  my_hash = md5.hexdigest(user_string + hash_count.to_s)
+  if(my_hash[0..4] == "00000")
+    puts hash_count
+    break
+  else
+    hash_count += 1
+  end
+end
+
+
